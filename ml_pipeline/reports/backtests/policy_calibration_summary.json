@@ -1,0 +1,98 @@
+{
+    "version": "v2",
+    "selection_data": "validation_only",
+    "policy": {
+        "buy_threshold": 0.5,
+        "sell_threshold": 0.35,
+        "confidence_margin": 0.0
+    },
+    "objective": "combined_return_percent - 0.25 * average_drawdown_percent",
+    "minimum_total_trades": 25,
+    "validation_result": {
+        "buy_threshold": 0.5,
+        "sell_threshold": 0.35,
+        "confidence_margin": 0.0,
+        "combined_return_percent": -0.6990348523999913,
+        "average_drawdown_percent": 1.1534750975449497,
+        "objective_score": -0.9874036267862287,
+        "total_trades": 46,
+        "stocks": [
+            {
+                "symbol": "HDFCBANK",
+                "return_percent": -0.374917849999998,
+                "maximum_drawdown_percent": 1.0624576999999846,
+                "sharpe_ratio": -0.7594093057219325,
+                "win_rate_percent": 14.285714285714285,
+                "total_trades": 7,
+                "signal_counts": {
+                    "SELL": 485,
+                    "HOLD": 2005,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "ICICIBANK",
+                "return_percent": 0.34268800000002375,
+                "maximum_drawdown_percent": 0.39929513659676535,
+                "sharpe_ratio": 1.0456521047484213,
+                "win_rate_percent": 57.14285714285714,
+                "total_trades": 7,
+                "signal_counts": {
+                    "SELL": 511,
+                    "HOLD": 1979,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "INFY",
+                "return_percent": -2.3310562859999773,
+                "maximum_drawdown_percent": 2.4270750738771296,
+                "sharpe_ratio": -3.8437369297104667,
+                "win_rate_percent": 25.0,
+                "total_trades": 16,
+                "signal_counts": {
+                    "SELL": 664,
+                    "HOLD": 1806,
+                    "BUY": 28
+                }
+            },
+            {
+                "symbol": "RELIANCE",
+                "return_percent": -0.5320382260000334,
+                "maximum_drawdown_percent": 0.9298663523656325,
+                "sharpe_ratio": -1.1737513922252447,
+                "win_rate_percent": 37.5,
+                "total_trades": 8,
+                "signal_counts": {
+                    "SELL": 560,
+                    "HOLD": 1930,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "TCS",
+                "return_percent": -0.5998498999999866,
+                "maximum_drawdown_percent": 0.9486812248852363,
+                "sharpe_ratio": -1.7627673828045927,
+                "win_rate_percent": 37.5,
+                "total_trades": 8,
+                "signal_counts": {
+                    "SELL": 613,
+                    "HOLD": 1875,
+                    "BUY": 10
+                }
+            }
+        ]
+    },
+    "ensemble_weights": {
+        "logistic_regression": 0.7,
+        "conv1d": 0.25,
+        "lstm": 0.05
+    },
+    "backtest_configuration": {
+        "initial_capital_per_stock": 100000.0,
+        "position_size_fraction": 0.25,
+        "transaction_cost_bps": 10.0,
+        "stop_loss_fraction": 0.02
+    }
+}

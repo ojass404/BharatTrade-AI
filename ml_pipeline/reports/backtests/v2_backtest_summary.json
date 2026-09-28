@@ -1,0 +1,229 @@
+{
+    "version": "v2_confidence_filtered",
+    "policy_selection": "validation_only",
+    "policy": {
+        "buy_threshold": 0.5,
+        "sell_threshold": 0.35,
+        "confidence_margin": 0.0
+    },
+    "validation_calibration": {
+        "buy_threshold": 0.5,
+        "sell_threshold": 0.35,
+        "confidence_margin": 0.0,
+        "combined_return_percent": -0.6990348523999913,
+        "average_drawdown_percent": 1.1534750975449497,
+        "objective_score": -0.9874036267862287,
+        "total_trades": 46,
+        "stocks": [
+            {
+                "symbol": "HDFCBANK",
+                "return_percent": -0.374917849999998,
+                "maximum_drawdown_percent": 1.0624576999999846,
+                "sharpe_ratio": -0.7594093057219325,
+                "win_rate_percent": 14.285714285714285,
+                "total_trades": 7,
+                "signal_counts": {
+                    "SELL": 485,
+                    "HOLD": 2005,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "ICICIBANK",
+                "return_percent": 0.34268800000002375,
+                "maximum_drawdown_percent": 0.39929513659676535,
+                "sharpe_ratio": 1.0456521047484213,
+                "win_rate_percent": 57.14285714285714,
+                "total_trades": 7,
+                "signal_counts": {
+                    "SELL": 511,
+                    "HOLD": 1979,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "INFY",
+                "return_percent": -2.3310562859999773,
+                "maximum_drawdown_percent": 2.4270750738771296,
+                "sharpe_ratio": -3.8437369297104667,
+                "win_rate_percent": 25.0,
+                "total_trades": 16,
+                "signal_counts": {
+                    "SELL": 664,
+                    "HOLD": 1806,
+                    "BUY": 28
+                }
+            },
+            {
+                "symbol": "RELIANCE",
+                "return_percent": -0.5320382260000334,
+                "maximum_drawdown_percent": 0.9298663523656325,
+                "sharpe_ratio": -1.1737513922252447,
+                "win_rate_percent": 37.5,
+                "total_trades": 8,
+                "signal_counts": {
+                    "SELL": 560,
+                    "HOLD": 1930,
+                    "BUY": 8
+                }
+            },
+            {
+                "symbol": "TCS",
+                "return_percent": -0.5998498999999866,
+                "maximum_drawdown_percent": 0.9486812248852363,
+                "sharpe_ratio": -1.7627673828045927,
+                "win_rate_percent": 37.5,
+                "total_trades": 8,
+                "signal_counts": {
+                    "SELL": 613,
+                    "HOLD": 1875,
+                    "BUY": 10
+                }
+            }
+        ]
+    },
+    "ensemble_weights": {
+        "logistic_regression": 0.7,
+        "conv1d": 0.25,
+        "lstm": 0.05
+    },
+    "backtest_configuration": {
+        "initial_capital_per_stock": 100000.0,
+        "position_size_fraction": 0.25,
+        "transaction_cost_bps": 10.0,
+        "stop_loss_fraction": 0.02,
+        "execution": "next_candle_open"
+    },
+    "combined": {
+        "stock_count": 5,
+        "total_initial_capital": 500000.0,
+        "total_final_capital": 498494.3812780001,
+        "net_profit_loss": -1505.6187219999265,
+        "total_return_percent": -0.3011237443999853,
+        "total_trades": 34,
+        "total_transaction_cost": 1642.040722
+    },
+    "stocks": [
+        {
+            "symbol": "HDFCBANK",
+            "database_run_id": 6,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 477,
+                "HOLD": 2021,
+                "BUY": 2
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 99452.216878,
+            "net_profit_loss": -547.7831219999935,
+            "total_return_percent": -0.5477831219999935,
+            "sharpe_ratio": -4.540024223773371,
+            "maximum_drawdown_percent": 0.5889460085985727,
+            "win_rate_percent": 50.0,
+            "total_trades": 2,
+            "total_transaction_cost": 98.60512200000001,
+            "trade_report": "ml_pipeline/reports/backtests/hdfcbank_v2_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/hdfcbank_v2_equity.csv"
+        },
+        {
+            "symbol": "ICICIBANK",
+            "database_run_id": 7,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 505,
+                "HOLD": 1991,
+                "BUY": 4
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 99765.78060000003,
+            "net_profit_loss": -234.21939999997267,
+            "total_return_percent": -0.23421939999997266,
+            "sharpe_ratio": -1.0253169681823855,
+            "maximum_drawdown_percent": 0.408036355514139,
+            "win_rate_percent": 25.0,
+            "total_trades": 4,
+            "total_transaction_cost": 195.6194,
+            "trade_report": "ml_pipeline/reports/backtests/icicibank_v2_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/icicibank_v2_equity.csv"
+        },
+        {
+            "symbol": "INFY",
+            "database_run_id": 8,
+            "period": {
+                "start": "2026-04-21T06:00:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 793,
+                "HOLD": 1700,
+                "BUY": 8
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 100267.03150000004,
+            "net_profit_loss": 267.031500000041,
+            "total_return_percent": 0.267031500000041,
+            "sharpe_ratio": 0.6075162320719736,
+            "maximum_drawdown_percent": 0.5048351948268945,
+            "win_rate_percent": 37.5,
+            "total_trades": 8,
+            "total_transaction_cost": 391.06850000000003,
+            "trade_report": "ml_pipeline/reports/backtests/infy_v2_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/infy_v2_equity.csv"
+        },
+        {
+            "symbol": "RELIANCE",
+            "database_run_id": 9,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 444,
+                "HOLD": 2052,
+                "BUY": 4
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 99870.311,
+            "net_profit_loss": -129.6889999999985,
+            "total_return_percent": -0.12968899999999847,
+            "sharpe_ratio": -0.5717490574364292,
+            "maximum_drawdown_percent": 0.3001085239208208,
+            "win_rate_percent": 50.0,
+            "total_trades": 4,
+            "total_transaction_cost": 195.889,
+            "trade_report": "ml_pipeline/reports/backtests/reliance_v2_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/reliance_v2_equity.csv"
+        },
+        {
+            "symbol": "TCS",
+            "database_run_id": 10,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 702,
+                "HOLD": 1782,
+                "BUY": 16
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 99139.04130000001,
+            "net_profit_loss": -860.9586999999883,
+            "total_return_percent": -0.8609586999999884,
+            "sharpe_ratio": -1.6631188124504284,
+            "maximum_drawdown_percent": 1.0245022117171154,
+            "win_rate_percent": 37.5,
+            "total_trades": 16,
+            "total_transaction_cost": 760.8587,
+            "trade_report": "ml_pipeline/reports/backtests/tcs_v2_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/tcs_v2_equity.csv"
+        }
+    ],
+    "generated_at": "2026-09-20T16:53:52.964658+00:00"
+}

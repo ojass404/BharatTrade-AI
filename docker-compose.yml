@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bharattrade_postgres
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-stock_ai}
+      POSTGRES_USER: ${POSTGRES_USER:-stock_ai_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-stock_ai_password}
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - stock_ai_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-stock_ai_user} -d ${POSTGRES_DB:-stock_ai}"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  stock_ai_postgres_data:
+    name: stock_ai_postgres_data

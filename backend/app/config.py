@@ -16,6 +16,12 @@ class Settings(BaseSettings):
     app_env: str = Field(default="development", alias="APP_ENV")
     debug: bool = Field(default=True, alias="DEBUG")
 
+    market_data_provider: str = "angel_one"
+    angel_api_key: str = "TOQyEPyg"
+    angel_client_code: str = "AAAD996178"
+    angel_pin: str = "1412"
+    angel_totp_secret: str = "D2FIPWJATJ4CAPRMGYNTKZGCVM"
+
     api_prefix: str = Field(default="/api/v1", alias="API_PREFIX")
     cors_origins: str = Field(
         default="http://localhost:8501,http://127.0.0.1:8501",

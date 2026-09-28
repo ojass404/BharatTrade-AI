@@ -1,0 +1,153 @@
+{
+    "model": "validation_optimized_ensemble_v1",
+    "evaluation_scope": "independent long-only backtest per stock",
+    "execution_rule": "next_candle_open",
+    "data_split": "unseen chronological test period",
+    "ensemble_weights": {
+        "logistic_regression": 0.7,
+        "conv1d": 0.25,
+        "lstm": 0.05
+    },
+    "backtest_configuration": {
+        "initial_capital_per_stock": 100000.0,
+        "position_size_fraction": 0.25,
+        "transaction_cost_bps": 10.0,
+        "stop_loss_fraction": 0.02
+    },
+    "combined": {
+        "stock_count": 5,
+        "total_initial_capital": 500000.0,
+        "total_final_capital": 456987.8432419995,
+        "net_profit_loss": -43012.15675800049,
+        "total_return_percent": -8.602431351600098,
+        "total_trades": 823
+    },
+    "stocks": [
+        {
+            "symbol": "HDFCBANK",
+            "database_run_id": 1,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 550,
+                "HOLD": 1539,
+                "BUY": 411
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 90101.33871199992,
+            "net_profit_loss": -9898.661288000076,
+            "total_return_percent": -9.898661288000076,
+            "sharpe_ratio": -7.226092714821796,
+            "maximum_drawdown_percent": 10.06474448800007,
+            "win_rate_percent": 28.90625,
+            "total_trades": 128,
+            "profit_factor": 0.30175140506412446,
+            "total_transaction_cost": 5970.449288,
+            "trade_report": "ml_pipeline/reports/backtests/hdfcbank_ensemble_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/hdfcbank_ensemble_equity.csv"
+        },
+        {
+            "symbol": "ICICIBANK",
+            "database_run_id": 2,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 594,
+                "HOLD": 1611,
+                "BUY": 295
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 93737.76659999997,
+            "net_profit_loss": -6262.233400000026,
+            "total_return_percent": -6.262233400000026,
+            "sharpe_ratio": -5.829256812356361,
+            "maximum_drawdown_percent": 6.262233400000026,
+            "win_rate_percent": 30.215827338129497,
+            "total_trades": 139,
+            "profit_factor": 0.3829298710269011,
+            "total_transaction_cost": 6491.4334,
+            "trade_report": "ml_pipeline/reports/backtests/icicibank_ensemble_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/icicibank_ensemble_equity.csv"
+        },
+        {
+            "symbol": "INFY",
+            "database_run_id": 3,
+            "period": {
+                "start": "2026-04-21T06:00:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 872,
+                "HOLD": 896,
+                "BUY": 733
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 91281.01229599986,
+            "net_profit_loss": -8718.987704000145,
+            "total_return_percent": -8.718987704000144,
+            "sharpe_ratio": -3.7118044012209266,
+            "maximum_drawdown_percent": 8.743057452652543,
+            "win_rate_percent": 33.980582524271846,
+            "total_trades": 206,
+            "profit_factor": 0.581870602003383,
+            "total_transaction_cost": 9486.291704,
+            "trade_report": "ml_pipeline/reports/backtests/infy_ensemble_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/infy_ensemble_equity.csv"
+        },
+        {
+            "symbol": "RELIANCE",
+            "database_run_id": 4,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 529,
+                "HOLD": 1607,
+                "BUY": 364
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 93108.36298399988,
+            "net_profit_loss": -6891.637016000124,
+            "total_return_percent": -6.891637016000124,
+            "sharpe_ratio": -5.865093689856469,
+            "maximum_drawdown_percent": 6.891637016000124,
+            "win_rate_percent": 33.57664233576642,
+            "total_trades": 137,
+            "profit_factor": 0.41490959952412876,
+            "total_transaction_cost": 6434.853016,
+            "trade_report": "ml_pipeline/reports/backtests/reliance_ensemble_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/reliance_ensemble_equity.csv"
+        },
+        {
+            "symbol": "TCS",
+            "database_run_id": 5,
+            "period": {
+                "start": "2026-04-21T05:30:00+00:00",
+                "end": "2026-09-11T09:45:00+00:00"
+            },
+            "signal_counts": {
+                "SELL": 792,
+                "HOLD": 993,
+                "BUY": 715
+            },
+            "initial_capital": 100000.0,
+            "final_capital": 88759.36264999988,
+            "net_profit_loss": -11240.637350000121,
+            "total_return_percent": -11.24063735000012,
+            "sharpe_ratio": -6.439034242907265,
+            "maximum_drawdown_percent": 11.332720802130932,
+            "win_rate_percent": 33.80281690140845,
+            "total_trades": 213,
+            "profit_factor": 0.43815646104964584,
+            "total_transaction_cost": 9562.98735,
+            "trade_report": "ml_pipeline/reports/backtests/tcs_ensemble_trades.csv",
+            "equity_report": "ml_pipeline/reports/backtests/tcs_ensemble_equity.csv"
+        }
+    ],
+    "generated_at": "2026-09-18T16:55:42.567494+00:00"
+}
