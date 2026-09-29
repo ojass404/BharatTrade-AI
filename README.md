@@ -9,6 +9,7 @@ BharatTrade AI is an end-to-end quantitative trading and paper-trading platform 
 ## 📋 Table of Contents
 - [Overview](#-overview)
 - [Key Features](#-key-features)
+- [Repository Architecture](#-repository-architeecture)
 - [System Architecture](#-system-architecture)
 - [Tech Stack](#-tech-stack)
 - [Installation & Setup](#-installation--setup)
