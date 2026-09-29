@@ -96,6 +96,135 @@ The Indian stock market generates large volumes of continuously changing price a
                   | Streamlit / Plotly Dashboard|
                   +-----------------------------+
 
+## 📁 Repository Structure
+
+```text
+Stock-AI/
+│
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   ├── config.py
+│   │   ├── database.py
+│   │   │
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   ├── health.py
+│   │   │   ├── market.py
+│   │   │   ├── predictions.py
+│   │   │   ├── backtesting.py
+│   │   │   └── paper_trading.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── stock.py
+│   │   │   ├── prediction.py
+│   │   │   ├── portfolio.py
+│   │   │   └── trade.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   ├── __init__.py
+│   │   │   ├── market.py
+│   │   │   ├── prediction.py
+│   │   │   ├── backtest.py
+│   │   │   └── trade.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── market_data_service.py
+│   │   │   ├── feature_service.py
+│   │   │   ├── prediction_service.py
+│   │   │   ├── backtest_service.py
+│   │   │   └── paper_trading_service.py
+│   │   │
+│   │   └── core/
+│   │       ├── __init__.py
+│   │       ├── logging.py
+│   │       └── exceptions.py
+│   │
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── test_health.py
+│   │   ├── test_features.py
+│   │   └── test_backtesting.py
+│   │
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── app.py
+│   ├── api_client.py
+│   ├── components/
+│   │   ├── __init__.py
+│   │   ├── charts.py
+│   │   └── metrics.py
+│   │
+│   ├── pages/
+│   │   ├── 1_Market_Analysis.py
+│   │   ├── 2_AI_Prediction.py
+│   │   ├── 3_Backtesting.py
+│   │   └── 4_Paper_Trading.py
+│   │
+│   └── requirements.txt
+│
+├── ml_pipeline/
+│   ├── data/
+│   │   ├── raw/
+│   │   │   └── .gitkeep
+│   │   └── processed/
+│   │       └── .gitkeep
+│   │
+│   ├── artifacts/
+│   │   └── .gitkeep
+│   │
+│   ├── notebooks/
+│   │   └── experimentation.ipynb
+│   │
+│   ├── reports/
+│   │   ├── figures/
+│   │   │   └── .gitkeep
+│   │   └── metrics/
+│   │       └── .gitkeep
+│   │
+│   ├── src/
+│   │   ├── __init__.py
+│   │   ├── download_data.py
+│   │   ├── validate_data.py
+│   │   ├── preprocess.py
+│   │   ├── features.py
+│   │   ├── create_sequences.py
+│   │   ├── train_conv1d.py
+│   │   ├── train_lstm.py
+│   │   ├── train_ensemble.py
+│   │   ├── evaluate_models.py
+│   │   └── export_onnx.py
+│   │
+│   └── requirements.txt
+│
+├── scripts/
+│   ├── initialize_database.py
+│   ├── download_sample_data.py
+│   └── run_local.sh
+│
+├── docs/
+│   ├── architecture.md
+│   ├── methodology.md
+│   └── api_documentation.md
+│
+├── .github/
+│   └── workflows/
+│       └── tests.yml
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── .env.example
+├── .gitignore
+├── docker-compose.yml
+├── render.yaml
+├── README.md
+└── LICENSE
 
 ## 🛠️ Tech Stack
 
